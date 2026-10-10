@@ -1,0 +1,165 @@
+{
+  "project": "SentimentIQ",
+  "phase": 6,
+  "purpose": "Validation-only controlled experiments",
+  "training_rows": 45615,
+  "validation_rows": 2000,
+  "class_order": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "character_vectorizer": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "min_df": 3,
+    "sublinear_tf": true,
+    "dtype": "float32",
+    "fit_split": "train"
+  },
+  "classifier": {
+    "type": "LinearSVC",
+    "class_weight": "balanced",
+    "max_iter": 5000,
+    "random_state": 42
+  },
+  "test_data_loaded_or_used": false,
+  "existing_saved_models_overwritten": false,
+  "results": [
+    {
+      "name": "word_only_C_0.5",
+      "accuracy": 0.6775,
+      "macro_f1": 0.6498745262335288,
+      "macro_recall": 0.6541648693547427,
+      "feature_count": 94850,
+      "class_metrics": {
+        "negative": {
+          "precision": 0.5131195335276968,
+          "recall": 0.5641025641025641,
+          "f1": 0.5374045801526718,
+          "support": 312
+        },
+        "neutral": {
+          "precision": 0.6758938869665513,
+          "recall": 0.6743383199079401,
+          "f1": 0.6751152073732719,
+          "support": 869
+        },
+        "positive": {
+          "precision": 0.7506329113924051,
+          "recall": 0.724053724053724,
+          "f1": 0.7371037911746426,
+          "support": 819
+        }
+      },
+      "confusion_matrix": [
+        [
+          176,
+          101,
+          35
+        ],
+        [
+          121,
+          586,
+          162
+        ],
+        [
+          46,
+          180,
+          593
+        ]
+      ]
+    },
+    {
+      "name": "word_character_C_0.25",
+      "accuracy": 0.7045,
+      "macro_f1": 0.6774196194838353,
+      "macro_recall": 0.680731364275668,
+      "feature_count": 203973,
+      "class_metrics": {
+        "negative": {
+          "precision": 0.5492537313432836,
+          "recall": 0.5897435897435898,
+          "f1": 0.5687789799072643,
+          "support": 312
+        },
+        "neutral": {
+          "precision": 0.7031963470319634,
+          "recall": 0.7088607594936709,
+          "f1": 0.7060171919770774,
+          "support": 869
+        },
+        "positive": {
+          "precision": 0.7718631178707225,
+          "recall": 0.7435897435897436,
+          "f1": 0.7574626865671642,
+          "support": 819
+        }
+      },
+      "confusion_matrix": [
+        [
+          184,
+          94,
+          34
+        ],
+        [
+          107,
+          616,
+          146
+        ],
+        [
+          44,
+          166,
+          609
+        ]
+      ]
+    },
+    {
+      "name": "word_character_C_0.5",
+      "accuracy": 0.701,
+      "macro_f1": 0.6773780667663489,
+      "macro_recall": 0.6800304126253494,
+      "feature_count": 203973,
+      "class_metrics": {
+        "negative": {
+          "precision": 0.5683890577507599,
+          "recall": 0.5993589743589743,
+          "f1": 0.5834633385335414,
+          "support": 312
+        },
+        "neutral": {
+          "precision": 0.698394495412844,
+          "recall": 0.7008055235903338,
+          "f1": 0.6995979322228604,
+          "support": 869
+        },
+        "positive": {
+          "precision": 0.7584480600750939,
+          "recall": 0.73992673992674,
+          "f1": 0.7490729295426453,
+          "support": 819
+        }
+      },
+      "confusion_matrix": [
+        [
+          187,
+          92,
+          33
+        ],
+        [
+          100,
+          609,
+          160
+        ],
+        [
+          42,
+          171,
+          606
+        ]
+      ]
+    }
+  ]
+}
