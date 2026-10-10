@@ -1,0 +1,36 @@
+{
+    "experiment": "phase5_baseline_comparison",
+    "selection_metric": "macro_f1",
+    "evaluation_split": "validation",
+    "test_split_used": false,
+    "models": [
+        {
+            "model": "LinearSVC",
+            "accuracy": 0.672,
+            "macro_precision": 0.6497906733049247,
+            "macro_recall": 0.6318364008237426,
+            "macro_f1": 0.6392411745219547,
+            "training_seconds": 2.356529299984686,
+            "validation_prediction_seconds": 0.0018328999867662787
+        },
+        {
+            "model": "LogisticRegression",
+            "accuracy": 0.6805,
+            "macro_precision": 0.6732969765912187,
+            "macro_recall": 0.6164204993318917,
+            "macro_f1": 0.6320688688264697,
+            "training_seconds": 12.566401899966877,
+            "validation_prediction_seconds": 0.0023941000108607113
+        },
+        {
+            "model": "MultinomialNB",
+            "accuracy": 0.626,
+            "macro_precision": 0.7033847140926325,
+            "macro_recall": 0.4966194728852957,
+            "macro_f1": 0.46283189107741496,
+            "training_seconds": 0.03563810000196099,
+            "validation_prediction_seconds": 0.0031925999792292714
+        }
+    ],
+    "provisional_best_model": "LinearSVC"
+}

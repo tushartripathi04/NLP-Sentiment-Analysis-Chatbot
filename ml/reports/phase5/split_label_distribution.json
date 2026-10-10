@@ -1,0 +1,56 @@
+{
+    "experiment": "phase5_split_label_distribution_audit",
+    "purpose": "Descriptive label distribution analysis only",
+    "used_for_model_selection": false,
+    "splits": {
+        "train": {
+            "total": 45615,
+            "class_counts": {
+                "negative": 7093,
+                "neutral": 20673,
+                "positive": 17849
+            },
+            "class_percentages": {
+                "negative": 15.5497,
+                "neutral": 45.3206,
+                "positive": 39.1297
+            }
+        },
+        "val": {
+            "total": 2000,
+            "class_counts": {
+                "negative": 312,
+                "neutral": 869,
+                "positive": 819
+            },
+            "class_percentages": {
+                "negative": 15.6,
+                "neutral": 43.45,
+                "positive": 40.95
+            },
+            "percentage_point_difference_vs_train": {
+                "negative": 0.0503,
+                "neutral": -1.8706,
+                "positive": 1.8203
+            }
+        },
+        "test": {
+            "total": 12284,
+            "class_counts": {
+                "negative": 3972,
+                "neutral": 5937,
+                "positive": 2375
+            },
+            "class_percentages": {
+                "negative": 32.3347,
+                "neutral": 48.3312,
+                "positive": 19.3341
+            },
+            "percentage_point_difference_vs_train": {
+                "negative": 16.785,
+                "neutral": 3.0106,
+                "positive": -19.7956
+            }
+        }
+    }
+}

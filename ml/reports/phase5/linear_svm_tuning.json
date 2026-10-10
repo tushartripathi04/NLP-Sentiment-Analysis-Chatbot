@@ -1,0 +1,72 @@
+{
+    "experiment": "linear_svm_C_tuning",
+    "selection_metric": "validation_macro_f1",
+    "training_split": "train",
+    "evaluation_split": "validation",
+    "test_split_used": false,
+    "feature_source": "existing_saved_tfidf",
+    "C_values_tested": [
+        0.1,
+        0.5,
+        1.0,
+        2.0,
+        5.0
+    ],
+    "best_validation_configuration": {
+        "C": 0.5,
+        "accuracy": 0.686,
+        "macro_precision": 0.6675293461695574,
+        "macro_recall": 0.6361034652173893,
+        "macro_f1": 0.6475090008764464,
+        "training_seconds": 1.4632062999880873,
+        "iterations": 28
+    },
+    "results_ranked": [
+        {
+            "C": 0.5,
+            "accuracy": 0.686,
+            "macro_precision": 0.6675293461695574,
+            "macro_recall": 0.6361034652173893,
+            "macro_f1": 0.6475090008764464,
+            "training_seconds": 1.4632062999880873,
+            "iterations": 28
+        },
+        {
+            "C": 1.0,
+            "accuracy": 0.672,
+            "macro_precision": 0.6497906733049247,
+            "macro_recall": 0.6318364008237426,
+            "macro_f1": 0.6392411745219547,
+            "training_seconds": 2.330630700045731,
+            "iterations": 46
+        },
+        {
+            "C": 2.0,
+            "accuracy": 0.661,
+            "macro_precision": 0.6373030894560359,
+            "macro_recall": 0.6253114560076586,
+            "macro_f1": 0.6305704956038692,
+            "training_seconds": 3.9993820000090636,
+            "iterations": 83
+        },
+        {
+            "C": 5.0,
+            "accuracy": 0.6495,
+            "macro_precision": 0.6253695785462213,
+            "macro_recall": 0.61335177949102,
+            "macro_f1": 0.6185307538265816,
+            "training_seconds": 8.539417399966624,
+            "iterations": 200
+        },
+        {
+            "C": 0.1,
+            "accuracy": 0.6695,
+            "macro_precision": 0.6755499759994604,
+            "macro_recall": 0.590604250414377,
+            "macro_f1": 0.6062627615813835,
+            "training_seconds": 0.8095080000348389,
+            "iterations": 13
+        }
+    ],
+    "scikit_learn_version": "1.9.1"
+}

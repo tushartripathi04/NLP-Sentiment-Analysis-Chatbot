@@ -1,0 +1,123 @@
+{
+    "experiment": "logistic_regression_baseline",
+    "model": "LogisticRegression",
+    "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 1000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+    },
+    "selection_metric": "macro_f1",
+    "training_split": "train",
+    "evaluation_split": "validation",
+    "test_split_used": false,
+    "feature_source": "existing_saved_tfidf",
+    "feature_count": 94850,
+    "train_rows": 45615,
+    "validation_rows": 2000,
+    "classes": {
+        "0": "negative",
+        "1": "neutral",
+        "2": "positive"
+    },
+    "metrics": {
+        "accuracy": 0.6805,
+        "macro_precision": 0.6732969765912187,
+        "macro_recall": 0.6164204993318917,
+        "macro_f1": 0.6320688688264697
+    },
+    "per_class_metrics": {
+        "negative": {
+            "precision": 0.6344086021505376,
+            "recall": 0.3782051282051282,
+            "f1-score": 0.4738955823293173
+        },
+        "neutral": {
+            "precision": 0.6403085824493732,
+            "recall": 0.7640966628308401,
+            "f1-score": 0.6967471143756558
+        },
+        "positive": {
+            "precision": 0.7451737451737451,
+            "recall": 0.706959706959707,
+            "f1-score": 0.7255639097744361
+        }
+    },
+    "classification_report": {
+        "negative": {
+            "precision": 0.6344086021505376,
+            "recall": 0.3782051282051282,
+            "f1-score": 0.4738955823293173,
+            "support": 312.0
+        },
+        "neutral": {
+            "precision": 0.6403085824493732,
+            "recall": 0.7640966628308401,
+            "f1-score": 0.6967471143756558,
+            "support": 869.0
+        },
+        "positive": {
+            "precision": 0.7451737451737451,
+            "recall": 0.706959706959707,
+            "f1-score": 0.7255639097744361,
+            "support": 819.0
+        },
+        "accuracy": 0.6805,
+        "macro avg": {
+            "precision": 0.6732969765912187,
+            "recall": 0.6164204993318917,
+            "f1-score": 0.6320688688264697,
+            "support": 2000.0
+        },
+        "weighted avg": {
+            "precision": 0.6823304696583852,
+            "recall": 0.6805,
+            "f1-score": 0.6737827530922275,
+            "support": 2000.0
+        }
+    },
+    "confusion_matrix": [
+        [
+            118,
+            152,
+            42
+        ],
+        [
+            49,
+            664,
+            156
+        ],
+        [
+            19,
+            221,
+            579
+        ]
+    ],
+    "confusion_matrix_axis_order": [
+        "negative",
+        "neutral",
+        "positive"
+    ],
+    "timing_seconds": {
+        "training": 12.566401899966877,
+        "validation_prediction": 0.0023941000108607113,
+        "validation_prediction_per_sample": 1.1970500054303556e-06
+    },
+    "iterations_per_class": [
+        106
+    ],
+    "environment": {
+        "python_version": "3.14.2",
+        "scikit_learn_version": "1.9.1"
+    }
+}

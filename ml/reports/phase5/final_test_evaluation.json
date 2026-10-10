@@ -1,0 +1,85 @@
+{
+    "experiment": "sentimentiq_final_test_evaluation",
+    "model_file": "ml/models/sentimentiq_best_model.joblib",
+    "model_type": "LinearSVC",
+    "model_parameters": {
+        "C": 0.5,
+        "class_weight": "balanced"
+    },
+    "evaluation_split": "test",
+    "training_or_tuning_on_test": false,
+    "test_predictions_generated_once": true,
+    "test_rows": 12284,
+    "feature_count": 94850,
+    "class_names": [
+        "negative",
+        "neutral",
+        "positive"
+    ],
+    "accuracy": 0.5909312927385216,
+    "macro_precision": 0.5794573346836224,
+    "macro_recall": 0.5925347902057307,
+    "macro_f1": 0.5843389771344302,
+    "actual_test_class_counts": {
+        "negative": 3972,
+        "neutral": 5937,
+        "positive": 2375
+    },
+    "predicted_test_class_counts": {
+        "negative": 3702,
+        "neutral": 5766,
+        "positive": 2816
+    },
+    "confusion_matrix": [
+        [
+            2185,
+            1462,
+            325
+        ],
+        [
+            1324,
+            3598,
+            1015
+        ],
+        [
+            193,
+            706,
+            1476
+        ]
+    ],
+    "classification_report": {
+        "negative": {
+            "precision": 0.5902215018908697,
+            "recall": 0.5501007049345418,
+            "f1-score": 0.5694553036226219,
+            "support": 3972.0
+        },
+        "neutral": {
+            "precision": 0.6240027748872702,
+            "recall": 0.606029981472124,
+            "f1-score": 0.6148850722037085,
+            "support": 5937.0
+        },
+        "positive": {
+            "precision": 0.5241477272727273,
+            "recall": 0.6214736842105263,
+            "f1-score": 0.5686765555769602,
+            "support": 2375.0
+        },
+        "accuracy": 0.5909312927385216,
+        "macro avg": {
+            "precision": 0.5794573346836224,
+            "recall": 0.5925347902057307,
+            "f1-score": 0.5843389771344302,
+            "support": 12284.0
+        },
+        "weighted avg": {
+            "precision": 0.5937736187145054,
+            "recall": 0.5909312927385216,
+            "f1-score": 0.5912614750209827,
+            "support": 12284.0
+        }
+    },
+    "evaluation_timestamp_utc": "2026-10-10T05:28:27.920631+00:00",
+    "interpretation_note": "The test label distribution differs from the training distribution. Interpret final metrics in light of this distribution shift. The test split was not used for model selection."
+}
