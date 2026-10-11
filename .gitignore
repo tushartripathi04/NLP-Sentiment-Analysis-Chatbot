@@ -25,6 +25,8 @@ Thumbs.db
 # ML generated files
 *.pkl
 *.joblib
+!ml/models/sentimentiq_best_model.joblib
+!ml/models/tfidf_vectorizer.joblib
 
 # Python distribution
 build/
@@ -33,3 +35,5 @@ dist/
 
 # Logs
 *.log
+# Local ML datasets and generated features
+ml/data/
