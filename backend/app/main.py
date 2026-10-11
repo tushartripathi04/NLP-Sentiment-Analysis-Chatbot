@@ -1,4 +1,4 @@
-﻿
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.sentiment import router as sentiment_router
@@ -14,6 +14,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://nlp-sentiment-analysis-chatbot.vercel.app",
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
@@ -32,4 +33,6 @@ def health_check():
     return {"status": "healthy"}
 
 app.include_router(sentiment_router)
+
+
 
